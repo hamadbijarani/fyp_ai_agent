@@ -15,6 +15,10 @@ cp config/authorized_folders.example.yaml config/authorized_folders.yaml
 # edit authorized folders
 ```
 
+## Inference priority
+
+CPU-first by default (`inference.device=cpu`, `n_gpu_layers=0`). Optional GPU uses a general backend (Vulkan/Metal/ROCm) via llama.cpp, never CUDA/cuDNN.
+
 ## Optional: Ollama
 
 ```bash

@@ -6,6 +6,11 @@ app:
   chunk_overlap: 80
   top_k: 5
 
+inference:
+  device: cpu          # cpu | auto (gpu only if available)
+  gpu_backend: vulkan   # none | vulkan | metal | rocm  (never cuda/cudnn)
+  n_gpu_layers: 0      # 0 = CPU only; -1 = offload all (when gpu available)
+
 llm:
   provider: ollama
   model: qwen2.5:3b-instruct-q4_K_M
@@ -13,6 +18,7 @@ llm:
   temperature: 0.2
   max_tokens: 512
   timeout: 120
+  num_gpu: 0
 
 embeddings:
   model: sentence-transformers/all-MiniLM-L6-v2

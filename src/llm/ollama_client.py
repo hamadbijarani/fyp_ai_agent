@@ -30,7 +30,7 @@ class OllamaClient(LLMClient):
         if system:
             messages.append({"role": "system", "content": system})
         messages.append({"role": "user", "content": prompt})
-        opts = {"temperature": self.temperature, "num_predict": self.max_tokens}
+        opts = {"temperature": self.temperature, "num_predict": self.max_tokens, "num_gpu": self.num_gpu}
         kwargs: dict[str, Any] = {"model": self.model, "messages": messages, "options": opts}
         if format_json:
             kwargs["format"] = "json"
