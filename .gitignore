@@ -1,0 +1,7 @@
+fyp_env/
+__pycache__/
+*.pyc
+.env
+data/index/
+*.log
+models/

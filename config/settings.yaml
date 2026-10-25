@@ -1,0 +1,23 @@
+app:
+  name: secure-local-ai-assistant
+  data_dir: ./data
+  max_context_chars: 4000
+  chunk_size: 500
+  chunk_overlap: 80
+  top_k: 5
+
+llm:
+  provider: ollama
+  model: qwen2.5:3b-instruct-q4_K_M
+  base_url: http://localhost:11434
+  temperature: 0.2
+  max_tokens: 512
+  timeout: 120
+
+embeddings:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  device: cpu
+
+retrieval:
+  index_path: ./data/index/faiss.index
+  metadata_path: ./data/index/metadata.json

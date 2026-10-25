@@ -1,0 +1,8 @@
+authorized:
+  - /home/you/Documents/Work
+  - /home/you/Projects/FYP/data/samples
+allowed_extensions:
+  - .txt
+  - .pdf
+  - .docx
+  - .md
